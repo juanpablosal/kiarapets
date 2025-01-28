@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ================ INCLUIMOS LA LIBRERIA DE ICONOS ======== -->
+  <script src="https://kit.fontawesome.com/a83b4ed346.js" crossorigin="anonymous"></script>
+  <title>Kiara pets</title>
+</head>
+
+<body>
+  <!-- ================ HEADER ======== -->
+
+  <header class="header">
+    <h1>Porque sabemos que ellos tambien son parte de la familia</h1>
+  </header>
+
+  <!-- ================ LOGO  ======== -->
+
+  <div class="logo"><img src="./media/logoKiara.png" alt=""></div>
+
+  <!-- ================ CARDS  ======== -->
+
+  <!-- PRIMERA CARD -->
+  <div class="card-container">
+    <div class="card">
+      <img src="./media/gatoCard.jpg" alt="">
+      <div class="card-content">
+        <h1>
+          SPA
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam inventore magni aut autem eum asperiores
+          nesciunt accusantium soluta tempore placeat doloremque dignissimos tempora excepturi a, perferendis numquam
+          distinctio ullam et.</p>
+      </div>
+    </div>
+
+    <!-- SEGUNDA CARD -->
+
+    <div class="card">
+      <img src="./media/gatoCard.jpg" alt="">
+      <div class="card-content">
+        <h1>
+          VETERINARIA
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam inventore magni aut autem eum asperiores
+          nesciunt accusantium soluta tempore placeat doloremque dignissimos tempora excepturi a, perferendis numquam
+          distinctio ullam et.</p>
+      </div>
+    </div>
+    <!-- TERCERA CARD -->
+
+    <div class="card">
+      <img src="./media/gatoCard.jpg" alt="">
+      <div class="card-content">
+        <h1>
+          PRODUCTOS
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam inventore magni aut autem eum asperiores
+          nesciunt accusantium soluta tempore placeat doloremque dignissimos tempora excepturi a, perferendis numquam
+          distinctio ullam et.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BUTTON -->
+
+  <div class="cta-button">
+    <button><a href="">! Pedir mi cita ¡</a></button>
+  </div>
+
+  <!-- HERO SECTION -->
+
+  <div class="hero">
+    <div class="cat">
+      <div class="circle">
+        <img src="./media/cat.png" alt="">
+      </div>
+    </div>
+    <div class="about">
+      <h3>Conoce Kiara pets</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quam illo aspernatur, accusamus a voluptate
+        totam eos quibusdam dolor beatae ipsa, ut doloribus necessitatibus ipsum impedit maiores dolore error veniam
+        labore rerum similique dolorum vero inventore. Excepturi neque doloremque error.</p>
+    </div>
+  </div>
+
+  <!-- ================ FORMS ===================-->
+  <div class="forms">
+    <div class="wrapper">
+      <form action="">
+        <h1>Formulario de contacto</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Dueño" id="owner" required>
+          <i class="fa-regular fa-user"></i>
+        </div>
+
+        <div class="input-box">
+          <input type="text" placeholder="Mascota" id="pet" required>
+          <i class="fa-solid fa-paw"></i>
+        </div>
+
+        <div class="input-box">
+          <label for="pet">Tipo de cita :</label>
+          <select name="spa-veterinaria" id="spa-veterinaria" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="Veterinaria">Veterinaria</option>
+            <option value="Spa">Spa Y peluquería</option>
+          </select>
+
+        </div>
+
+        <div class="input-box">
+          <label for="pet">Día de la cita :</label>
+          <input type="date" id="cita" required>
+        </div>
+
+        <button type="submit" class="btn">Pedir mi cita</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ================ FOOTER ===================-->
+
+  <!-- FOOTER ICONS -->
+  <footer class="footer">
+
+    <ul class="social-icon">
+      <li class="icon-elem"><a href="" class="icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a></li>
+      <li class="icon-elem"><a href="" class="icon">
+          <i class="fa-brands fa-instagram"></i>
+        </a></li>
+
+      <li class="icon-elem"><a href="" class="icon">
+          <i class="fa-brands fa-facebook"></i>
+        </a></li>
+
+      <li class="icon-elem"><a href="" class="icon">
+          <i class="fa-solid fa-envelope"></i>
+        </a></li>
+
+    </ul>
+
+    <!-- FOOTER TEXT -->
+
+    <ul class="menu">
+      <li class="menu-elem"><a href="" class="menu-icon">Inicio</a></li>
+      <li class="menu-elem"><a href="" class="menu-icon">Equipo</a></li>
+      <li class="menu-elem"><a href="" class="menu-icon">Contacto</a></li>
+      <li class="menu-elem"><a href="" class="menu-icon">Video</a></li>
+      <li class="menu-elem"><a href="" class="menu-icon">Sobre nosotros</a></li>
+    </ul>
+
+    <p class="text">
+      @2025 | Todos los derechos reservados
+    </p>
+  </footer>
+
+  <script>
+    document.querySelector(".btn").addEventListener("click", function (event) {
+      event.preventDefault(); // Evita el envío normal del formulario
+  
+      // Capturamos los valores de los campos
+      const owner = document.getElementById("owner").value.trim();
+      const pet = document.getElementById("pet").value.trim();
+      const appointmentType = document.getElementById("spa-veterinaria").value;
+      const date = document.getElementById("cita").value;
+  
+      // Validación simple
+      if (!owner || !pet || !appointmentType || !date) {
+        alert("Por favor, llena todos los campos antes de continuar.");
+        return;
+      }
+  
+      // Plantilla de mensaje para WhatsApp
+      const message = `Hola! Mi nombre es ${owner}, y estoy interesado en ${appointmentType} para mi mascota ${pet}. ¿Tienes disponibilidad el día ${date}?`;
+  
+      // Convertimos el mensaje para que sea válido en URL
+      const whatsappMessage = encodeURIComponent(message);
+  
+      // Enlace a WhatsApp con el mensaje
+      const whatsappLink = `https://wa.me/573142527679?text=${whatsappMessage}`;
+  
+      // Redirigir al enlace de WhatsApp
+      window.location.href = whatsappLink;
+    });
+  </script>
+  <script src="./date.js"></script>
+  
+</body>
+</html>

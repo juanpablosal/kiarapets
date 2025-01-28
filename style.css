@@ -1,0 +1,442 @@
+/* ============== IMPORTAMOS LA FUENTE =================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* ============== DECLARAMOS LOS ROOTS =================== */
+
+:root {
+    /* === COLORS === */
+    --darkest-blue: #025373;
+    --secondary-blue: #1FAFBF;
+    --third-blue: #1FBFBF;
+    --background-color: #F2F2F2;
+
+    /* === FONTS === */
+    --primary-font: "Oswald", serif;
+
+    /* === FONT SIZES (Fluidos con clamp) === */
+    --bigger-font: clamp(4rem, 7vw, 8rem);
+    ;
+    --secondary-tittle: clamp(3rem, 4em . 5rem);
+    --text: clamp(.8rem, 1.2rem, 2rem);
+}
+
+/* ============= RESET BASICO ====================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--primary-font);
+}
+
+/* ============= ENCABEZADO ====================== */
+
+.header {
+    min-height: 40vh;
+    max-height: 110vh;
+    height: auto;
+    width: 100%;
+    top: 0;
+    font-size: var(--bigger-font);
+    background: url(./media/background.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 0 20px;
+    /* Espaciado lateral */
+    box-sizing: border-box;
+    /* Asegura que el padding no desborde */
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+    font-size: var(--bigger-font);
+    /* Tamaño fluido */
+    width: 75%;
+    padding-bottom: 3rem;
+}
+
+.logo {
+    position: relative;
+    height: 100vh;
+    width: auto;
+    max-height: 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    top: -15%;
+    box-shadow: grey 0px -10px 20px;
+}
+
+
+/* ============= CARDS ====================== */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    margin-top: 100px;
+}
+
+.card {
+    width: 325px;
+    background-color: var(--third-blue);
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    color: white;
+}
+
+.card-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: var(--text);
+    margin-bottom: 20px;
+
+}
+
+/*  =========== CTA BUTTON ====================== */
+
+
+.cta-button {
+    width: 100%;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-button button {
+    padding: 30px;
+    text-decoration: none;
+    border-radius: 55px;
+    border-color: transparent;
+    background-color: var(--darkest-blue);
+
+}
+
+.cta-button button:hover {
+    padding: 40px;
+    text-decoration: none;
+    border-radius: 55px;
+    border-color: transparent;
+    background-color: var(--third-blue);
+    transition: .5s;
+
+}
+
+.cta-button button a {
+
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+}
+
+/*  =========== HERO SECTION  ====================== */
+
+/*  =========== ABOUT US SECTION ============ */
+
+
+.hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-bottom: 100px;
+
+}
+
+.hero p {
+    text-align: end;
+    width: 90%;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-right: 40px;
+}
+
+.hero h3 {
+    margin: 0;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.cat {
+    width: 60%;
+    height: 100%;
+    display: flex;
+}
+
+.about {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    z-index: 40;
+}
+
+.circle {
+    width: 40em;
+    height: 40em;
+    background: var(--darkest-blue);
+    border-radius: 50%;
+    box-shadow: var(--third-blue) 30px 10px;
+    position: relative;
+}
+
+.circle img {
+    width: 80%;
+    position: absolute;
+    left: 20%;
+    bottom: 30px;
+}
+
+/*================== FORMULARIOS =====================*/
+
+.forms {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+.wrapper {
+    min-width: 500px;
+    background-color: var(--third-blue);
+    color: white;
+    border-radius: 25px;
+}
+
+.wrapper h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 30px 0;
+}
+
+.input-box input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid;
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input:hover {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid;
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: white;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.input-box label {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.input-box input[type="date"] {
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+
+    top: 50%;
+}
+
+.input-box select {
+    width: 100%;
+    height: 100%;
+    padding: 20px 45px 20px 20px;
+    color: white;
+    border-radius: 35px;
+    font-size: 16px;
+    background-color: transparent;
+    border: white solid 2px;
+}
+
+.input-box select:focus {
+    width: 100%;
+    height: 100%;
+    padding: 20px 45px 20px 20px;
+    color: white;
+    border-radius: 35px;
+    font-size: 16px;
+    background-color: transparent;
+    border: white solid 2px;
+    outline: none; /* Eliminar el borde de foco */
+}
+
+.input-box select option {
+color: black;
+background-color: white;
+
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 25px;
+    border: none;
+    margin: 40px 30px;
+    background-color: #025373;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.btn:hover {
+    padding: 30px;
+    transition: .3s;
+    background-color: white;
+    color: #025373;
+    border-radius: 30px;
+    border: none;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*================== FOOTER =====================*/
+
+.footer {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #025373;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.75;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
