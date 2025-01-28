@@ -12,5 +12,6 @@
     dateInput.setAttribute("min", minDate);
   }
 
-  // Ejecutamos la función al cargar la página
+  // Ejecutamos la función al cargar la páginaconsole.log("Configurando la fecha mínima como el día de hoy");
+console.log("Fecha mínima:", minDate);
   setMinDate();
